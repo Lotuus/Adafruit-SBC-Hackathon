@@ -2,7 +2,7 @@ input.onGesture(Gesture.Shake, function () {
     makerController.player1.setButton(ArcadeButton.Left, false)
     makerController.player1.setButton(ArcadeButton.Right, false)
     makerController.player1.press(ArcadeButton.A)
-    light.onboardStrip().showAnimationFrame(light.sparkleAnimation)
+    light.onboardStrip().showAnimation(light.sparkleAnimation, 500)
     makerController.player1.setButton(ArcadeButton.A, false)
     makerController.player1.setButton(ArcadeButton.Left, false)
     makerController.player1.setButton(ArcadeButton.Right, false)

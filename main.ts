@@ -4,7 +4,7 @@ input.onGesture(Gesture.Shake, function () {
     light.showRing(
     `yellow yellow yellow yellow yellow yellow yellow yellow yellow yellow`
     )
-    makerController.player1.reset()
+    makerController.player1.setButton(ArcadeButton.A, false)
     control.waitMicros(2000000)
 })
 forever(function () {
@@ -21,7 +21,8 @@ forever(function () {
         )
         makerController.player1.setButton(ArcadeButton.Right, true)
     } else {
-        makerController.player1.reset()
+        makerController.player1.setButton(ArcadeButton.Left, false)
+        makerController.player1.setButton(ArcadeButton.Right, false)
         light.showRing(
         `black black black black black black black black black black`
         )

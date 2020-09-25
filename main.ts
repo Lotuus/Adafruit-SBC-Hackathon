@@ -1,11 +1,15 @@
 input.onGesture(Gesture.Shake, function () {
-    makerController.player1.reset()
+    makerController.player1.setButton(ArcadeButton.Left, false)
+    makerController.player1.setButton(ArcadeButton.Right, false)
     makerController.player1.press(ArcadeButton.A)
     light.showRing(
     `yellow yellow yellow yellow yellow yellow yellow yellow yellow yellow`
     )
     makerController.player1.setButton(ArcadeButton.A, false)
-    control.waitMicros(2000000)
+    light.showRing(
+    `black black black black black black black black black black`
+    )
+    control.waitMicros(500000)
 })
 forever(function () {
     if (input.buttonA.isPressed()) {
